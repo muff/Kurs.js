@@ -12,7 +12,20 @@
                                                                                 88                  
 */
 
-var topics = ["variables", "functions"];
+var topics = [
+      "reserved", 
+      "variables", 
+      "typeof", 
+      "falsy", 
+      "math", 
+      "operators",
+      "switches",
+      "loops",
+      "functions",
+      "this",
+      "pitfalls",
+      "jQuery"
+      ];
 
 /*
                                                                                           
@@ -80,6 +93,11 @@ var num = 0,
 
 // Only Arrays have order 
 
+arr[0] // first element in array
+obj.key // dot syntax
+obj['key'] // map access, allows
+obj[ 'key' + x ]
+
 
 
 /*
@@ -98,11 +116,10 @@ MM88MMM 8b       d8 8b,dPPYba,   ,adPPYba,  ,adPPYba, MM88MMM
             d8'     88                                         
            d8'      88                               
 
+There be dragons
 
 
-
-
-Value               Class      Type
+Value                      Class      Type
 -------------------------------------*/
 typeof "foo"               String     string
 typeof new String("foo")   String     object
@@ -156,6 +173,99 @@ console.log(false === 0); // outputs false. false is not the number 0.
     The number 0
     The number NaN (yep, 'Not a Number' is a number, it is a special number)
 
+console.log("Hello"+1);
+console.log("Hello"-1);
+
+/*
+
+                                                   
+                                      88           
+                                ,d    88           
+                                88    88           
+88,dPYba,,adPYba,  ,adPPYYba, MM88MMM 88,dPPYba,   
+88P'   "88"    "8a ""     `Y8   88    88P'    "8a  
+88      88      88 ,adPPPPP88   88    88       88  
+88      88      88 88,    ,88   88,   88       88  
+88      88      88 `"8bbdP"Y8   "Y888 88       88  
+                                                   */
+
+1 + 1 // add
+1 - 1 // subtract
+1 * 1 // multiply
+1 / 1 // divide
+ = 
+ +=
+ -=
+ i++
+ u--
+
+(a-b)*(c+d)
+
+
+Math.abs(a)     // the absolute value of a
+Math.acos(a)    // arc cosine of a
+Math.asin(a)    // arc sine of a
+Math.atan(a)    // arc tangent of a
+Math.atan2(a,b) // arc tangent of a/b
+Math.ceil(a)    // integer closest to a and not less than a
+Math.cos(a)     // cosine of a
+Math.exp(a)     // exponent of a (Math.E to the power a)
+Math.floor(a)   // integer closest to a, not greater than a
+Math.log(a)     // log of a base e
+Math.max(a,b)   // the maximum of a and b
+Math.min(a,b)   // the minimum of a and b
+Math.pow(a,b)   // a to the power b
+Math.random()   // pseudorandom number 0 to 1 (see examples)
+Math.round(a)   // integer closest to a (see rounding examples)
+Math.sin(a)     // sine of a
+Math.sqrt(a)    // square root of a
+Math.tan(a)     // tangent of a
+
+
+
+
+
+
+
+
+
+/*
+                                                                                                  
+                                                           ,d                                     
+                                                           88                                     
+ ,adPPYba,  8b,dPPYba,   ,adPPYba, 8b,dPPYba, ,adPPYYba, MM88MMM ,adPPYba,  8b,dPPYba, ,adPPYba,  
+a8"     "8a 88P'    "8a a8P_____88 88P'   "Y8 ""     `Y8   88   a8"     "8a 88P'   "Y8 I8[    ""  
+8b       d8 88       d8 8PP""""""" 88         ,adPPPPP88   88   8b       d8 88          `"Y8ba,   
+"8a,   ,a8" 88b,   ,a8" "8b,   ,aa 88         88,    ,88   88,  "8a,   ,a8" 88         aa    ]8I  
+ `"YbbdP"'  88`YbbdP"'   `"Ybbd8"' 88         `"8bbdP"Y8   "Y888 `"YbbdP"'  88         `"YbbdP"'  
+            88                                                                                    
+            88                                                                                    
+
+*/
+
+
+
+
+== != === !== > >= < <= 
+A comparison operator compares two operands and returns a Boolean
+(true or false) as to the validity of the comparison. 
+Operands can be of numeric or string type. 
+ 
+ == equal operator
+ != not equal operator 
+ === strict equal operator
+ !== strict not equal operator
+ > greater than operator 
+ >= greater than or equal operator
+ <  less than operator
+ <= less than or equal operator
+ || or
+ && and
+
+a = false;
+!a // returns true;
+
+
 /*
 
                              88                   88                                
@@ -170,7 +280,9 @@ aa    ]8I   `8bd8'  `8bd8'   88   88,  "8a,   ,aa 88       88 "8b,   ,aa aa    ]
                                                                                    
 */
 
-if(/anything truthy/){
+
+
+if(comparison||condition){
   
 }else if(condition){
   
@@ -278,10 +390,11 @@ var fn = function (arg1, arg2){
         return this;
 };
 fn.prototype.init= function (argument) { console.log(this, argument);};
+
 fn(1); 
 fn(9).init(); // Reference Error
 new fn(2);
-new fn(3).init(4);
+new fn(3).init(4); // Works
 
 
 
@@ -352,7 +465,7 @@ foo.call(null, 2, 3, 4); // results in a = 1, b = 2, c = 3
 
 */
 
-var open = function(){
+var alert = function(){
   console.log(this)
 };
 
@@ -370,14 +483,15 @@ var open = function(){
 
 
 
+
+
+
 // Anonymous selfexecuting functions
 (function(){
-
   var hello = function(){};
-  var open = function(){};
+  var alert = function(){};
   hello();
   open();
-
 }());
 hello(); // Reference Error
 
@@ -436,6 +550,9 @@ for(var i = 0; i < 10; i++) {
 
 
 
+
+
+
 /*
 
                                                                     
@@ -451,9 +568,8 @@ for(var i = 0; i < 10; i++) {
 888P"                                                     d8'       
 
 */
-
-// Global namespace
 // For easier crossbrowser javascript
+// Global namespace
 
 /*
 
@@ -472,6 +588,19 @@ aa    ]8I "8b,   ,aa 88 "8b,   ,aa "8a,   ,aa   88,  "8a,   ,a8" 88         aa  
 $('#id, .class, div > p').hide();
 // Chainable
 $('#id, .class, div > p').hide().bind('click', clickHandler);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
@@ -499,6 +628,16 @@ $(selector).load(url, callback);
 
 
 
+
+
+
+
+
+
+
+
+
+
 /*
 
                                                                                         
@@ -521,6 +660,18 @@ $(this).closest()
 $(this).parent()
 $(this).parents()
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*
                                                                 
                          ,d                              ,d     
@@ -539,6 +690,20 @@ $(this).html()
 $(this).height()
 $(this).width()
 $(this).css('background-color')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
                                                                                                                        
@@ -561,6 +726,21 @@ $(this).insertAfter(target);
 $(this).detach(target);
 $(this).empty(target);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
                                                                 
                                                ,d               
@@ -582,6 +762,24 @@ $(element).live('event', handler);
 $(element).die('event', handler);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
                                                               
                     88 88 88         88                       
@@ -596,9 +794,22 @@ $(element).die('event', handler);
 */ 
 $.extend({a: 1}, {b: 2}); // returns {a:1, b:2}
 
+$(variable).each(function(k,v){ console.log(this, k, v); });
 // Waiting for document ready
 $(document).ready(function(){});
 $(function(){});
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
@@ -616,10 +827,6 @@ $(function(){});
  
 
 */
-
-
-
-
 
 $.callToBeCalledFromGlobalAnywhere = function(){};
 // $.newPlugin() can be called from anywhere after this
