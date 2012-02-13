@@ -1,15 +1,15 @@
 /*
-																																									 
-				88                                                                   88                     
-				88                                                                   ""              ,d     
-				88                                                                                   88     
-				88 ,adPPYYba, 8b       d8 ,adPPYYba, ,adPPYba,  ,adPPYba, 8b,dPPYba, 88 8b,dPPYba, MM88MMM  
-				88 ""     `Y8 `8b     d8' ""     `Y8 I8[    "" a8"     "" 88P'   "Y8 88 88P'    "8a  88     
-				88 ,adPPPPP88  `8b   d8'  ,adPPPPP88  `"Y8ba,  8b         88         88 88       d8  88     
+                                                                                   
+        88                                                                   88                     
+        88                                                                   ""              ,d     
+        88                                                                                   88     
+        88 ,adPPYYba, 8b       d8 ,adPPYYba, ,adPPYba,  ,adPPYba, 8b,dPPYba, 88 8b,dPPYba, MM88MMM  
+        88 ""     `Y8 `8b     d8' ""     `Y8 I8[    "" a8"     "" 88P'   "Y8 88 88P'    "8a  88     
+        88 ,adPPPPP88  `8b   d8'  ,adPPPPP88  `"Y8ba,  8b         88         88 88       d8  88     
 88,   ,d88 88,    ,88   `8b,d8'   88,    ,88 aa    ]8I "8a,   ,aa 88         88 88b,   ,a8"  88,    
  "Y8888P"  `"8bbdP"Y8     "8"     `"8bbdP"Y8 `"YbbdP"'  `"Ybbd8"' 88         88 88`YbbdP"'   "Y888  
-																																								88                  
-																																								88                  
+                                                                                88                  
+                                                                                88                  
 */
 
 var topics = ["variables", "functions"];
@@ -56,27 +56,27 @@ Infinity
 
 /*
 
-																																											 
+                                                                                       
 8b           d8                     88            88          88                       
 `8b         d8'                     ""            88          88                       
  `8b       d8'                                    88          88                       
-	`8b     d8' ,adPPYYba, 8b,dPPYba, 88 ,adPPYYba, 88,dPPYba,  88  ,adPPYba, ,adPPYba,  
-	 `8b   d8'  ""     `Y8 88P'   "Y8 88 ""     `Y8 88P'    "8a 88 a8P_____88 I8[    ""  
-		`8b d8'   ,adPPPPP88 88         88 ,adPPPPP88 88       d8 88 8PP"""""""  `"Y8ba,   
-		 `888'    88,    ,88 88         88 88,    ,88 88b,   ,a8" 88 "8b,   ,aa aa    ]8I  
-			`8'     `"8bbdP"Y8 88         88 `"8bbdP"Y8 8Y"Ybbd8"'  88  `"Ybbd8"' `"YbbdP"'  
-																																											 
+  `8b     d8' ,adPPYYba, 8b,dPPYba, 88 ,adPPYYba, 88,dPPYba,  88  ,adPPYba, ,adPPYba,  
+   `8b   d8'  ""     `Y8 88P'   "Y8 88 ""     `Y8 88P'    "8a 88 a8P_____88 I8[    ""  
+    `8b d8'   ,adPPPPP88 88         88 ,adPPPPP88 88       d8 88 8PP"""""""  `"Y8ba,   
+     `888'    88,    ,88 88         88 88,    ,88 88b,   ,a8" 88 "8b,   ,aa aa    ]8I  
+      `8'     `"8bbdP"Y8 88         88 `"8bbdP"Y8 8Y"Ybbd8"'  88  `"Ybbd8"' `"YbbdP"'  
+                                                                                       
 */
 
 
 var str = new String("") || "Hello world";
 var num = 0,
-	arr = new Array() || [0,"2",{}],
-	obj = new Object() || { key: "value" },
-	reg = new RegExp() || /^(.*?)$/,
-				flag = true || false,
-				und = undefined,
-				fn = function(){};
+  arr = new Array() || [0,"2",{}],
+  obj = new Object() || { key: "value" },
+  reg = new RegExp() || /^(.*?)$/,
+        flag = true || false,
+        und = undefined,
+        fn = function(){};
 
 // Only Arrays have order 
 
@@ -149,12 +149,12 @@ console.log(false + 1); // outputs 1
 console.log(false == 0); // outputs true
 console.log(false === 0); // outputs false. false is not the number 0.
 
-		false
-		null
-		undefined
-		The empty string ''
-		The number 0
-		The number NaN (yep, 'Not a Number' is a number, it is a special number)
+    false
+    null
+    undefined
+    The empty string ''
+    The number 0
+    The number NaN (yep, 'Not a Number' is a number, it is a special number)
 
 /*
 
@@ -171,21 +171,21 @@ aa    ]8I   `8bd8'  `8bd8'   88   88,  "8a,   ,aa 88       88 "8b,   ,aa aa    ]
 */
 
 if(/anything truthy/){
-	
+  
 }else if(condition){
-	
+  
 }else{
-	
+  
 }
 
 
 switch(variable){
 
-	case true:
-			break;
+  case true:
+      break;
 
-	default:
-			return true;
+  default:
+      return true;
 
 }
 
@@ -208,10 +208,10 @@ switch(variable){
 
 */
 var object = {
-		a: 1,
-		b: 2 
-	},
-	arr = [0,1,2];
+    a: 1,
+    b: 2 
+  },
+  arr = [0,1,2];
 
 for (var i = 0, u = arr.length; i < u; i++ ){
   // Do something arr[i]
@@ -221,21 +221,21 @@ for (var i = 0, u = arr.length; i < u; i++ ){
 
 var i = 0, u = 10;
 while(i>u){
-	// do stuff
-	i++;
+  // do stuff
+  i++;
 }
 
 
 
 for( var key in object ) {
-	var i = object[key];
-	if (i==1)
+  var i = object[key];
+  if (i==1)
     {
     continue;
     }
     // Do something
     if(i = 2){
-    	break;
+      break;
     }
 }
 
@@ -244,7 +244,7 @@ for( var key in object ) {
 
 /*
 
-																																												 
+                                                                                         
 88888888888                                        88                                    
 88                                           ,d    ""                                    
 88                                           88                                          
@@ -253,9 +253,9 @@ for( var key in object ) {
 88      88       88 88       88 8b           88    88 8b       d8 88       88  `"Y8ba,   
 88      "8a,   ,a88 88       88 "8a,   ,aa   88,   88 "8a,   ,a8" 88       88 aa    ]8I  
 88       `"YbbdP'Y8 88       88  `"Ybbd8"'   "Y888 88  `"YbbdP"'  88       88 `"YbbdP"'  
-																																												 
-					 
-					 Functions in JavaScript are first class objects. That means they can be passed around like any other value. One common use of this feature is to pass an anonymous function as a callback to another, possibly asynchronous function.                                                                              
+                                                                                         
+           
+           Functions in JavaScript are first class objects. That means they can be passed around like any other value. One common use of this feature is to pass an anonymous function as a callback to another, possibly asynchronous function.                                                                              
 
 */
 
@@ -272,10 +272,10 @@ functionWithCallback(function(data){ });
 
 
 var fn = function (arg1, arg2){
-				if(arguments.length){
-								console.log('hello', arguments);
-				}				
-				return this;
+        if(arguments.length){
+                console.log('hello', arguments);
+        }       
+        return this;
 };
 fn.prototype.init= function (argument) { console.log(this, argument);};
 fn(1); 
@@ -353,7 +353,7 @@ foo.call(null, 2, 3, 4); // results in a = 1, b = 2, c = 3
 */
 
 var open = function(){
-	console.log(this)
+  console.log(this)
 };
 
 
@@ -373,10 +373,10 @@ var open = function(){
 // Anonymous selfexecuting functions
 (function(){
 
-	var hello = function(){};
-	var open = function(){};
-	hello();
-	open();
+  var hello = function(){};
+  var open = function(){};
+  hello();
+  open();
 
 }());
 hello(); // Reference Error
@@ -625,10 +625,10 @@ $.callToBeCalledFromGlobalAnywhere = function(){};
 // $.newPlugin() can be called from anywhere after this
 
 $.fn.functionToBeEnabledInChainingPrototype = function(){
-	$(this).each(function(){
-			// Do whatever	
-	});
-	return this;
+  $(this).each(function(){
+      // Do whatever  
+  });
+  return this;
 };
 
 
